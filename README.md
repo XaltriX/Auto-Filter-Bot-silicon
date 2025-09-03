@@ -104,7 +104,7 @@ Experience all premium features and functionality with our live demo bot!
 Click The Button Below To Instantly Deploy Your Bot On **Heroku**.  
 
 <p align="center">
-  <a href="https://heroku.com/deploy?template=https://github.com/Silicon-Developer/Auto_Filter_Bot">
+  <a href="https://heroku.com/deploy?template=https://github.com/XaltriX/Auto-Filter-Bot-silicon">
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy on Heroku">
   </a>
 </p>
