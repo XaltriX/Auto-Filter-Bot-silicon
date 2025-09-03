@@ -1,0 +1,290 @@
+{
+  "name": "Silicon Auto Filter Bot",
+  "description": "A powerful Auto-Filter Telegram Bot with MongoDB, Shortener and Streaming support.",
+  "repository": "https://github.com/XaltriX/Auto-Filter-Bot-silicon",
+  "keywords": ["telegram", "bot", "python", "auto-filter", "mongodb"],
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bot token from @BotFather",
+      "required": true
+    },
+    "ADMINS": {
+      "description": "Admin user IDs separated by space",
+      "required": true
+    },
+    "USERNAME": {
+      "description": "Bot username or official link",
+      "value": "https://telegram.me/Silicon_Official",
+      "required": false
+    },
+    "LOG_CHANNEL": {
+      "description": "Log channel ID (must start with -100)",
+      "required": true
+    },
+    "MOVIE_GROUP_LINK": {
+      "description": "Telegram movie group link",
+      "value": "https://t.me/LuciferCinema",
+      "required": false
+    },
+    "QR_CODE": {
+      "description": "QR code image link",
+      "value": "https://graph.org/file/ccb9db43e62a2e524928e.jpg",
+      "required": false
+    },
+    "START_IMG": {
+      "description": "Start command image link",
+      "value": "https://i.ibb.co/LdT5fdJY/photo-2025-08-13-01-12-38-7537871916074270724.jpg",
+      "required": false
+    },
+    "FSUB_PICS": {
+      "description": "Force subscribe pics (space separated links)",
+      "value": "https://graph.org/file/7478ff3eac37f4329c3d8.jpg https://graph.org/file/56b5deb73f3b132e2bb73.jpg",
+      "required": false
+    },
+    "DATABASE_URI": {
+      "description": "MongoDB URI for main DB",
+      "required": true
+    },
+    "FILES_DATABASE_URL": {
+      "description": "MongoDB URI for files DB",
+      "required": true
+    },
+    "SECOND_FILES_DATABASE_URL": {
+      "description": "Second MongoDB URI for files (optional)",
+      "required": false
+    },
+    "DATABASE_NAME": {
+      "description": "MongoDB database name",
+      "value": "Silicon",
+      "required": false
+    },
+    "COLLECTION_NAME": {
+      "description": "MongoDB collection name",
+      "value": "Silicon_Files",
+      "required": false
+    },
+    "IS_VERIFY": {
+      "description": "Enable verification (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "LOG_VR_CHANNEL": {
+      "description": "Log verify channel ID",
+      "required": false
+    },
+    "LOG_API_CHANNEL": {
+      "description": "Log API channel ID",
+      "required": false
+    },
+    "TUTORIAL": {
+      "description": "Tutorial link 1",
+      "value": "https://t.me/Silicon_Bot_Update",
+      "required": false
+    },
+    "TUTORIAL2": {
+      "description": "Tutorial link 2",
+      "value": "https://t.me/Silicon_Bot_Update",
+      "required": false
+    },
+    "TUTORIAL3": {
+      "description": "Tutorial link 3",
+      "value": "https://t.me/Silicon_Bot_Update",
+      "required": false
+    },
+    "VERIFY_IMG": {
+      "description": "Verification image link",
+      "value": "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg",
+      "required": false
+    },
+    "SHORTENER_API": {
+      "description": "Shortener API key 1",
+      "required": false
+    },
+    "SHORTENER_WEBSITE": {
+      "description": "Shortener website 1",
+      "value": "shortslink.in",
+      "required": false
+    },
+    "SHORTENER_API2": {
+      "description": "Shortener API key 2",
+      "required": false
+    },
+    "SHORTENER_WEBSITE2": {
+      "description": "Shortener website 2",
+      "value": "shortslink2.com",
+      "required": false
+    },
+    "SHORTENER_API3": {
+      "description": "Shortener API key 3",
+      "required": false
+    },
+    "SHORTENER_WEBSITE3": {
+      "description": "Shortener website 3",
+      "value": "shortslink3.online",
+      "required": false
+    },
+    "TWO_VERIFY_GAP": {
+      "description": "Second verification gap in seconds",
+      "value": "14400",
+      "required": false
+    },
+    "THREE_VERIFY_GAP": {
+      "description": "Third verification gap in seconds",
+      "value": "14400",
+      "required": false
+    },
+    "AUTH_REQ_CHANNELS": {
+      "description": "Auth required channel IDs (space separated)",
+      "required": false
+    },
+    "AUTH_CHANNELS": {
+      "description": "Auth channels IDs (space separated)",
+      "required": false
+    },
+    "SUPPORT_GROUP": {
+      "description": "Support group ID",
+      "required": false
+    },
+    "REQUEST_CHANNEL": {
+      "description": "Request channel ID",
+      "required": false
+    },
+    "MOVIE_UPDATE_NOTIFICATION": {
+      "description": "Enable movie update notifications (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "MOVIE_UPDATE_CHANNEL": {
+      "description": "Movie update channel ID",
+      "required": false
+    },
+    "CHANNELS": {
+      "description": "Auto index channel IDs (space separated)",
+      "required": false
+    },
+    "DELETE_CHANNELS": {
+      "description": "Channel ID to delete files from DB",
+      "required": false
+    },
+    "IMAGE_FETCH": {
+      "description": "Enable image fetch (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "LINK_PREVIEW": {
+      "description": "Enable link preview (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "ABOVE_PREVIEW": {
+      "description": "Show preview above message (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "TMDB_API_KEY": {
+      "description": "TMDB API key from themoviedb.org",
+      "required": false
+    },
+    "TMDB_POSTER": {
+      "description": "Enable TMDB poster (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "LANDSCAPE_POSTER": {
+      "description": "Enable landscape poster (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "AUTO_FILTER": {
+      "description": "Enable auto filter (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "FILE_AUTO_DEL_TIMER": {
+      "description": "File auto delete timer in seconds",
+      "value": "600",
+      "required": false
+    },
+    "MAX_BTN": {
+      "description": "Maximum number of buttons",
+      "value": "8",
+      "required": false
+    },
+    "AUTO_DELETE": {
+      "description": "Enable auto delete (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "DELETE_TIME": {
+      "description": "Delete time in seconds",
+      "value": "300",
+      "required": false
+    },
+    "IMDB": {
+      "description": "Enable IMDB info (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "FILE_CAPTION": {
+      "description": "File caption template",
+      "required": false
+    },
+    "IMDB_TEMPLATE": {
+      "description": "IMDB template text",
+      "required": false
+    },
+    "LONG_IMDB_DESCRIPTION": {
+      "description": "Enable long IMDB description (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "PROTECT_CONTENT": {
+      "description": "Enable protect content (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "SPELL_CHECK": {
+      "description": "Enable spell check (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "LINK_MODE": {
+      "description": "Enable link mode (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "USE_CAPTION_FILTER": {
+      "description": "Enable caption filter (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "IS_PREMIUM_STREAM": {
+      "description": "Enable premium stream only (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "BIN_CHANNEL": {
+      "description": "Channel ID where files will be sent for streaming",
+      "required": true
+    },
+    "URL": {
+      "description": "App URL (Heroku app link)",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "stack": "heroku-22"
+}
